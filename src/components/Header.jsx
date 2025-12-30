@@ -30,7 +30,7 @@ const Header = () => {
         <header className={`header ${scrolled ? 'scrolled' : ''} `}>
             <div className="container header-content">
                 <a href="#hero" className="logo" onClick={closeMenu}>
-                    <img src="/logo.svg" alt="B Logo" className="logo-icon" />
+                    <img src="public/logo.svg" alt="B Logo" className="logo-icon" />
                     Bhautik<span>.</span>
                 </a>
 
