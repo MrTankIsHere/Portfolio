@@ -14,7 +14,7 @@ A beautiful, high-performance Single Page Application (SPA) portfolio built with
 
 1.  **Clone the repository**:
     ```bash
-    git clone https://github.com/yourusername/portfolio.git
+    git clone https://github.com/yourusername/portfolio.git](https://github.com/MrTankIsHere/Portfolio.git
     cd portfolio
     ```
 
