@@ -1,0 +1,100 @@
+{
+    "personal_info": {
+        "full_name": "Bhautik A. Tank",
+        "status": "Fresher",
+        "address": "Ahmedabad, Gujarat, India",
+        "phone": "+91-9023264126",
+        "email": "tankbhautik2002@gmail.com"
+    },
+    "summary": "I am a fresher in the IT and computer industry, currently pursuing a B.Tech degree at Silver Oak University. I am an organized and dependable candidate, capable of managing multiple priorities with a positive attitude, and willing to take on added responsibilities to meet team goals.",
+    "education": [
+        {
+            "level": "10th",
+            "institution": "Maniba Shikshan Sankul",
+            "percentage": "84.83%",
+            "completion_date": "March 2018"
+        },
+        {
+            "level": "Diploma",
+            "field": "Computer Engineering",
+            "institution": "Government Polytechnic Ahmedabad",
+            "cgpa": "8.87",
+            "completion_date": "June 2021"
+        },
+        {
+            "level": "B.Tech",
+            "field": "Computer Engineering",
+            "institution": "Aditya Silver Oak Institute of Technology",
+            "cgpa": "8.69 (6th Semester)",
+            "status": "Currently pursuing (4th Year)"
+        }
+    ],
+    "certifications": [
+        {
+            "title": "Data Structure and Algorithm Using Java",
+            "organization": "NPTEL",
+            "date": "October 2023"
+        },
+        {
+            "title": "Design and Analysis of Algorithms",
+            "organization": "NPTEL",
+            "date": "September 2024"
+        },
+        {
+            "title": "Red Hat System Administration (RH124)",
+            "organization": "Red Hat",
+            "date": "September 2025"
+        }
+    ],
+    "workshops_and_events": [
+        {
+            "title": "GenAI Agents Workshop",
+            "organized_by": "AI Club, IIT Bombay",
+            "description": "Learned the basics of Generative AI agents and their use in task automation and real-world problem solving.",
+            "date": "December 2025"
+        },
+        {
+            "title": "AWS Cloud Clubs Student Community Day Ahmedabad 2025",
+            "description": "Explored AI/ML and cloud-native development using Amazon SageMaker and AWS tools like Kiro and Amplify.",
+            "date": "December 2025"
+        },
+        {
+            "title": "Internet of Things: Unlocking the Essentials",
+            "description": "Understood core IoT concepts including sensors, devices, connectivity, and real-world applications.",
+            "date": "April 2024"
+        },
+        {
+            "title": "Flutter Workshop",
+            "description": "Gained basic knowledge of Flutter and Dart for building simple cross-platform mobile applications.",
+            "date": "September 2024"
+        }
+    ],
+    "technical_skills": [
+        "Linux",
+        "Linux System Administration",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Java",
+        "C",
+        "C++"
+    ],
+    "soft_skills": [
+        "Team Work",
+        "Communication",
+        "Problem Solving",
+        "Collaboration"
+    ],
+    "languages": [
+        "English",
+        "Hindi",
+        "Gujarati"
+    ],
+    "interests": [
+        "Music",
+        "Reading",
+        "Travelling",
+        "Chess"
+    ],
+    "declaration": "I hereby declare that all the information provided in this resume is true and accurate to the best of my knowledge."
+}
