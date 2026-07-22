@@ -126,11 +126,6 @@ Theme colors, glassmorphism blur values, and animation keyframes can be customiz
 
 - **Name**: Bhautik Tank
 - **Title**: Full Stack Developer (MERN) | AI-Integrated Web Applications
-- **Email**: tankbhautik2002@gmail.com
-- **Phone**: +91 9023264126
-- **GitHub**: [github.com/MrTankIsHere](https://github.com/MrTankIsHere)
-- **LinkedIn**: [linkedin.com/in/bhautik-tank](https://linkedin.com/in/bhautik-tank)
-- **Location**: Ahmedabad, Gujarat, India
 
 ---
 
