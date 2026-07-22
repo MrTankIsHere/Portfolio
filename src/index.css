@@ -3,7 +3,7 @@
 :root[data-theme="dark"] {
   --bg-primary: #0E0B0B;
   --bg-surface: #17110F;
-  --glass-bg: rgba(25, 18, 17, 0.65);
+  --glass-bg: rgba(25, 18, 17, 0.55);
   --glass-border: rgba(223, 37, 49, 0.25);
   --accent-primary: #E22227;
   --accent-secondary: #C7372C;
@@ -18,7 +18,7 @@
 :root[data-theme="light"] {
   --bg-primary: #F7F6F4;
   --bg-surface: #FFFFFF;
-  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-bg: rgba(255, 255, 255, 0.65);
   --glass-border: rgba(223, 37, 49, 0.18);
   --accent-primary: #DF2531;
   --accent-secondary: #C7372C;
@@ -68,20 +68,28 @@ body {
   100% { background-position: 0% 50%; }
 }
 
-/* Glassmorphism utility */
+/* Glassmorphism utilities */
 .glass {
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
   transition: border-color 0.3s ease, background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-nav {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(24px) saturate(200%);
+  -webkit-backdrop-filter: blur(24px) saturate(200%);
+  transition: all 0.3s ease;
 }
 
 .glass-card {
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.12);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }

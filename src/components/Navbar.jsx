@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useTheme } from "../context/ThemeContext";
-import { Sun, Moon, Menu, X, Code2 } from "lucide-react";
+import { Sun, Moon, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const links = [
@@ -40,8 +40,9 @@ export default function Navbar() {
   return (
     <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-3xl transition-all duration-300">
       <nav
-        className={`relative glass rounded-full px-5 py-3 flex items-center justify-between transition-all duration-300 ${scrolled ? "py-2.5 shadow-xl border-[var(--glass-border)]" : "py-3.5"
-          }`}
+        className={`relative glass-nav rounded-full px-5 py-3 flex items-center justify-between shadow-lg transition-all duration-300 ${
+          scrolled ? "py-2.5 shadow-2xl border-[var(--glass-border)]" : "py-3.5"
+        }`}
       >
         {/* Soft glowing underglow behind navbar */}
         <div className="absolute inset-0 -z-10 rounded-full gradient-bg opacity-25 blur-lg pointer-events-none" />
@@ -55,23 +56,23 @@ export default function Navbar() {
             BT
           </span>
           <span className="hidden sm:inline-block text-sm font-semibold">
-            Bhautik
-            <span className="text-[var(--accent-primary)]">.</span>
+            Bhautik<span className="text-[var(--accent-primary)]">.</span>
           </span>
         </a>
 
         {/* Desktop Nav Links */}
-        <div className="hidden md:flex items-center gap-1 bg-[var(--bg-surface)]/40 px-3 py-1.5 rounded-full border border-[var(--border-subtle)]/30">
+        <div className="hidden md:flex items-center gap-1 bg-[var(--bg-surface)]/30 backdrop-blur-md px-3 py-1.5 rounded-full border border-[var(--border-subtle)]/30">
           {links.map((link) => {
             const isActive = activeSection === link.href.substring(1);
             return (
               <a
                 key={link.href}
                 href={link.href}
-                className={`relative px-3.5 py-1.5 text-xs font-medium rounded-full transition-all duration-200 ${isActive
+                className={`relative px-3.5 py-1.5 text-xs font-medium rounded-full transition-all duration-200 ${
+                  isActive
                     ? "text-white font-semibold"
                     : "text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
-                  }`}
+                }`}
               >
                 {isActive && (
                   <motion.div
@@ -92,7 +93,7 @@ export default function Navbar() {
           <button
             onClick={toggleTheme}
             aria-label="Toggle theme"
-            className="w-9 h-9 rounded-full glass flex items-center justify-center text-[var(--text-primary)] hover:border-[var(--accent-primary)] hover:scale-105 transition-all duration-200"
+            className="w-9 h-9 rounded-full glass-nav flex items-center justify-center text-[var(--text-primary)] hover:border-[var(--accent-primary)] hover:scale-105 transition-all duration-200"
           >
             {theme === "dark" ? (
               <Sun size={17} className="text-amber-400" />
@@ -101,9 +102,9 @@ export default function Navbar() {
             )}
           </button>
 
-          {/* Mobile Menu Toggle Button */}
+          {/* Mobile Menu Toggle Button (Burger Menu Icon) */}
           <button
-            className="md:hidden w-9 h-9 rounded-full glass flex items-center justify-center text-[var(--text-primary)] hover:border-[var(--accent-primary)] transition-colors"
+            className="md:hidden w-9 h-9 rounded-full glass-nav flex items-center justify-center text-[var(--text-primary)] hover:border-[var(--accent-primary)] transition-colors"
             onClick={() => setOpen(!open)}
             aria-label="Toggle Navigation Menu"
           >
@@ -112,16 +113,17 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile Dropdown Menu */}
+      {/* Mobile Burger Menu Dropdown with High-Blur Glassmorphism */}
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ opacity: 0, y: -10, scale: 0.95 }}
+            initial={{ opacity: 0, y: -12, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: -10, scale: 0.95 }}
-            transition={{ duration: 0.2 }}
-            className="md:hidden mt-3 glass rounded-3xl p-5 flex flex-col gap-2 shadow-2xl border border-[var(--glass-border)]"
+            exit={{ opacity: 0, y: -12, scale: 0.95 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
+            className="md:hidden mt-3 glass-nav rounded-3xl p-5 flex flex-col gap-2 shadow-2xl border border-[var(--glass-border)] overflow-hidden relative"
           >
+            <div className="absolute inset-0 -z-10 gradient-bg opacity-10 blur-xl pointer-events-none" />
             {links.map((link) => {
               const isActive = activeSection === link.href.substring(1);
               return (
@@ -129,10 +131,11 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className={`px-4 py-2.5 rounded-xl text-sm font-medium transition-all ${isActive
+                  className={`px-4 py-2.5 rounded-xl text-sm font-medium transition-all ${
+                    isActive
                       ? "gradient-bg text-white font-semibold shadow-md"
-                      : "text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-surface)]/60"
-                    }`}
+                      : "text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-surface)]/50 backdrop-blur-sm"
+                  }`}
                 >
                   {link.label}
                 </a>
