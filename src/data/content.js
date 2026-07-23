@@ -85,7 +85,7 @@ export const projects = [
     stack: ["React.js", "Vite", "Tailwind CSS", "Framer Motion"],
     featured: false,
     github: "https://github.com/MrTankIsHere/Portfolio",
-    live: "#"
+    live: "https://bhautik-tank.vercel.app/"
   }
 ];
 
